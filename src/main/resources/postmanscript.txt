@@ -1,0 +1,14 @@
+curl --location 'http://localhost:8080/api/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "ram",
+    "email": "test@btest.com",
+    "mobileNumber": "9876543210",
+    "accountsDto": {
+        "accountNumber": 1001,
+        "accountType": "saving",
+        "branchAddress": "hyd"
+    }
+}'
+
+curl --location 'http://localhost:8080/api/fetch?mobileNumber=9876543210'
